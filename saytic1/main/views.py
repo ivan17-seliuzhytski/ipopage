@@ -9,9 +9,8 @@ def index(request):
 def about(request):
     context = {
         'author_FIO': 'Селюжицкий Иван Павлович',
-        'BIO':'группа: 81 ТП'
-        'лабораторная №14',
-
+        'BIO':'группа: 81 ТП',
+        'LR':'лабораторная №14'
     }
     return render(request, "main/about.html", context)
 
