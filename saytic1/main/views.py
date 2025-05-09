@@ -7,4 +7,17 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse('About page')
+    context = {
+        'author_FIO': 'Селюжицкий Иван Павлович',
+        'BIO':'группа: 81 ТП'
+        'лабораторная №14',
+
+    }
+    return render(request, "main/about.html", context)
+
+
+def shop(request):
+    context = {
+        'shop_name': 'Магазин тематических кружек и термосов'
+    }
+    return render(request, "main/shop.html", context)
